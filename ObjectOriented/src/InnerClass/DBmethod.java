@@ -17,6 +17,8 @@ public class DBmethod {
 		String dbpw = "1234";
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url, dbid, dbpw);
+
+	
 	}
 
 	public static String getnowWeahter() throws Exception{
