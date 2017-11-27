@@ -18,21 +18,7 @@ public class DBmethod {
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url, dbid, dbpw);
 	}
-	public static int addWeather(String getWeather) throws Exception{
-		getInfo();
-		PreparedStatement pst =conn.prepareStatement("insert into nowweather values(?)");
-		pst.setString(1, getWeather);
-		
-		int cnt = pst.executeUpdate();
-		return cnt;
-	}
-	public static int foreWeather(String getWeather) throws Exception{
-		getInfo();
-		PreparedStatement pst =conn.prepareStatement("insert into forecastweather values(?)");
-		pst.setString(1, getWeather);
-		int cnt = pst.executeUpdate();
-		return cnt;
-	}
+
 	public static String getnowWeahter() throws Exception{
 		getInfo();
 		ArrayList<String> arr = new ArrayList<>();
