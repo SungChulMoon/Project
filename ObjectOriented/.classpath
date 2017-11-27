@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/DataBaseProject/WebContent/WEB-INF/lib/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Moon light/Downloads/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Moon light/Desktop/jfreechart-1.0.19/jfreechart-1.0.19/jfreechart-1.0.19-demo.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Moon light/Documents/Calendar/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/지우/Documents/oop/Project/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/지우/Documents/oop/Project/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/지우/Desktop/jfree/lib/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/지우/Desktop/jfree/lib/jcommon-1.0.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
