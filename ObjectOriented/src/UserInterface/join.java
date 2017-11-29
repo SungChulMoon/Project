@@ -45,7 +45,7 @@ public class join extends JFrame {
 	public JCheckBox cb_style0 = new JCheckBox("시크");
 	public JCheckBox cb_style1 = new JCheckBox("큐티");
 	public JCheckBox cb_style2 = new JCheckBox("섹시");
-	public JCheckBox cb_style3 = new JCheckBox("복고");
+	public JCheckBox cb_style3 = new JCheckBox("빈티지");
 	private JTextField tf_local_join;
 
 	/**
