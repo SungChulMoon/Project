@@ -40,23 +40,7 @@ public class codiDisplay extends JPanel {
 	/**
 	 * codiDisplay »ý¼ºÀÚ
 	 */
-	public codiDisplay(String id){
-		
-		try {
-	         temp = DBmethod.getNowweatherParsed().getTemp();
-	         stylest = DBmethod.getUserinfo(id).getSty_str();
-	         sizest = DBmethod.getUserinfo(id).getSty_size();
-	         System.out.println(temp);
-	         System.out.println(stylest);
-	         System.out.println(sizest);
-	      } catch (NumberFormatException e1) {
-	         // TODO Auto-generated catch block
-	         e1.printStackTrace();
-	      } catch (Exception e1) {
-	         // TODO Auto-generated catch block
-	         e1.printStackTrace();
-	      }
-
+	public codiDisplay(String id, String temp, String stylest, String sizest){
 		setLayout(null);
 		
 		addCloth testAddCloth=new addCloth();

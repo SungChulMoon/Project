@@ -37,6 +37,7 @@ public class Main extends JFrame {
 	private JLabel la_weather2;
 	private JLabel lb_local;
 	nowWeather nowinfo ;
+	codiDisplay ts;
 	User us;
 	String location="";
 	String weather="";
@@ -123,6 +124,14 @@ public class Main extends JFrame {
 					
 					weatherIcon = new ImageIcon(weather);
 					weatherIcon2 = new ImageIcon(weather2);
+					
+					ts.removeAll();
+					ts = new codiDisplay(id, nowinfo.getTemp(),us.getSty_str(), us.getSty_size());
+					ts.setBounds(17, 723, 1090, 279);
+					ts.setOpaque(false);
+					contentPane.add(ts);
+					ts.repaint();
+					
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -286,8 +295,7 @@ public class Main extends JFrame {
 		panel_forecast.add(ex);
 		panel_forecast.setOpaque(false);
 		
-		
-		codiDisplay ts = new codiDisplay(id);
+		ts = new codiDisplay(id, nowinfo.getTemp(),us.getSty_str(), us.getSty_size());
 		ts.setBounds(17, 723, 1090, 279);
 		ts.setOpaque(false);
 		contentPane.add(ts);
