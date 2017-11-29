@@ -114,4 +114,11 @@ public class DBmethod {
 			}
 		return us;
 	}
+//	public static ArrayList<tipObject> addtip(String weather, String tip, String tiplink) throws Exception{
+//		getInfo();
+//		ArrayList<tipObject> arr = new ArrayList<>();
+//		PreparedStatement pst =conn.prepareStatement("select * from userinfo where ");
+//		ResultSet rs = pst.executeQuery();
+//		
+//	}
 }

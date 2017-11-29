@@ -89,5 +89,7 @@ public class adminPage extends JFrame {
 		btn_back.setBackground(Color.WHITE);
 		btn_back.setBounds(740, 40, 120, 40);
 		contentPane.add(btn_back);
+		
+		
 	}
 }
