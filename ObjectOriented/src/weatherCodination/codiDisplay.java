@@ -43,7 +43,7 @@ public class codiDisplay extends JPanel {
 	public codiDisplay(String id, String temp, String stylest, String sizest){
 		setLayout(null);
 		
-		addCloth testAddCloth=new addCloth();
+		initialCloth testAddCloth=new initialCloth(); //매개변수로 여잔지 남잔지 입력 받아야 함.
 		
 		panel=new codiPanel( Integer.parseInt(temp), stylest, sizest);
 		panel.setLocation(0,0);

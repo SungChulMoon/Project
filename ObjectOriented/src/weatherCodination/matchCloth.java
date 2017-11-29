@@ -105,10 +105,10 @@ public class matchCloth {
 		int style;
 		int n;
 		
-		clothMatrix[0]=new int[addCloth.clo_outer.size()];
-		clothMatrix[1]=new int[addCloth.clo_top.size()];
-		clothMatrix[2]=new int[addCloth.clo_pants.size()];
-		clothMatrix[3]=new int[addCloth.clo_shoes.size()];
+		clothMatrix[0]=new int[initialCloth.clo_outer.size()];
+		clothMatrix[1]=new int[initialCloth.clo_top.size()];
+		clothMatrix[2]=new int[initialCloth.clo_pants.size()];
+		clothMatrix[3]=new int[initialCloth.clo_shoes.size()];
 		
 		
 		Random random=new Random();
@@ -123,21 +123,21 @@ public class matchCloth {
 		}else	style=3;
 
 	
-		for(int i=0; i<addCloth.clo_outer.size(); i++) {
-			score=(int)(addCloth.clo_outer.get(i).thick*matchCloth.thick_weight+addCloth.clo_outer.get(i).style[style]*matchCloth.style_weight)/10;
+		for(int i=0; i<initialCloth.clo_outer.size(); i++) {
+			score=(int)(initialCloth.clo_outer.get(i).thick*matchCloth.thick_weight+initialCloth.clo_outer.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[0][i]=score;
 		}
 		
-		for(int i=0; i<addCloth.clo_top.size(); i++) {
-			score=(int)(addCloth.clo_top.get(i).thick*matchCloth.thick_weight+addCloth.clo_top.get(i).style[style]*matchCloth.style_weight)/10;
+		for(int i=0; i<initialCloth.clo_top.size(); i++) {
+			score=(int)(initialCloth.clo_top.get(i).thick*matchCloth.thick_weight+initialCloth.clo_top.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[1][i]=score;
 		}
-		for(int i=0; i<addCloth.clo_pants.size(); i++) {
-			score=(int)(addCloth.clo_pants.get(i).thick*matchCloth.thick_weight+addCloth.clo_pants.get(i).style[style]*matchCloth.style_weight)/10;
+		for(int i=0; i<initialCloth.clo_pants.size(); i++) {
+			score=(int)(initialCloth.clo_pants.get(i).thick*matchCloth.thick_weight+initialCloth.clo_pants.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[2][i]=score;
 		}
-		for(int i=0; i<addCloth.clo_shoes.size(); i++) {
-			score=(int)(addCloth.clo_shoes.get(i).thick*matchCloth.thick_weight+addCloth.clo_shoes.get(i).style[style]*matchCloth.style_weight)/10;
+		for(int i=0; i<initialCloth.clo_shoes.size(); i++) {
+			score=(int)(initialCloth.clo_shoes.get(i).thick*matchCloth.thick_weight+initialCloth.clo_shoes.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[3][i]=score;
 		}
 	}

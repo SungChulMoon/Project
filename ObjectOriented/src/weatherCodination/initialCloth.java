@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
  * @author 지우
  * 
  */
-public class addCloth {
+public class initialCloth {
 	/**아우터 객체를 담고 있는 ArrayList*/
 	static public ArrayList<outer> clo_outer = new ArrayList<outer>();
 	/**상의 객체를 담고 있는 ArrayList*/
@@ -28,7 +28,7 @@ public class addCloth {
 	 * addCloth의 생성자
 	 * 
 	 * */
-	addCloth() {
+	initialCloth() {
 		this.initialOuter();
 		this.initialTop();
 		this.initialPants();
