@@ -41,6 +41,7 @@ public class Login extends JFrame {
 		ImageIcon Icon_id = new ImageIcon("src/lb_id.png");
 		ImageIcon Icon_pass = new ImageIcon("src/lb_pass.png");
 		ImageIcon Icon_login = new ImageIcon("src/lb_login.png");
+		ImageIcon Icon_logo = new ImageIcon("src/logo.png");
 		
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,7 +50,6 @@ public class Login extends JFrame {
 		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 
@@ -115,16 +115,21 @@ public class Login extends JFrame {
 							JOptionPane.ERROR_MESSAGE);
 				} else if (idcheck && passcheck) {
 					JOptionPane.showMessageDialog(null, "·Î±×ÀÎ ¿Ï·á", "·Î±×ÀÎ ¿Ï·á", JOptionPane.INFORMATION_MESSAGE);
-					
+					if(tf_id_login.getText().equals("admin")) {
+						adminPage ap = new adminPage();
+						ap.setVisible(true);
+						dispose();
+					}
+					else {
 					Main main = new Main(tf_id_login.getText());
 					main.setVisible(true);
 					dispose();
-					
+					}
 				}
 
 			}
 		});
-		btn_login.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.BOLD, 20));
+		btn_login.setFont(new Font("±¼¸²", Font.BOLD, 20));
 		btn_login.setForeground(new Color(5, 97, 232));
 
 		btn_login.setBounds(150, 300, 200, 30);
@@ -139,10 +144,14 @@ public class Login extends JFrame {
 
 			}
 		});
-		btn_join_login.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 19));
+		btn_join_login.setFont(new Font("±¼¸²", Font.PLAIN, 19));
 		btn_join_login.setBounds(364, 300, 210, 30);
 		btn_join_login.setForeground(new Color(5, 97, 232));
 		contentPane.add(btn_join_login);
+		
+		JLabel label_1 = new JLabel(Icon_logo);
+		label_1.setBounds(284, 16, 198, 169);
+		contentPane.add(label_1);
 
 	}
 

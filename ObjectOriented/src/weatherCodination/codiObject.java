@@ -37,5 +37,6 @@ public class codiObject {
 		codiTop=initialCloth.clo_top.get(matchCloth.priorityMatrix[1][random.nextInt(3)]);
 		codiPants=initialCloth.clo_pants.get(matchCloth.priorityMatrix[2][random.nextInt(3)]);
 		codiShoes=initialCloth.clo_shoes.get(matchCloth.priorityMatrix[3][random.nextInt(3)]);
+
 	}
 }

@@ -50,6 +50,8 @@ public class Main extends JFrame {
 	private JPanel panel_style;
 
 	public Main(String id) {
+
+
 			setLocation sl = new setLocation();
 		try {
 			us = DBmethod.getUserinfo(id);
@@ -203,7 +205,7 @@ public class Main extends JFrame {
 		la_tip2 = new JLabel(tip2);
 		la_tip2.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 20));
 		la_tip2.setBackground(Color.WHITE);
-		la_tip2.setBounds(110, 695, 460, 40);
+		la_tip2.setBounds(65, 694, 460, 40);
 		la_tip2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		la_tip2.addMouseListener(new MouseAdapter() {
 		   public void mouseClicked(MouseEvent e) {
