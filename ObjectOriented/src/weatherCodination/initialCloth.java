@@ -28,7 +28,7 @@ public class initialCloth {
 	 * addCloth의 생성자
 	 * 
 	 * */
-	initialCloth() {
+	initialCloth() { //매개변수로 성별 가져와서 객체 생성
 		this.initialOuter();
 		this.initialTop();
 		this.initialPants();
@@ -39,7 +39,7 @@ public class initialCloth {
 	/**
 	 * 초기 outer객체를 생성해 ArrayList인 clo_outer에 삽입하는 함수
 	 * */
-	public void initialOuter() {		
+	public void initialOuter() {
 		String outerPath=imgPath+"outer/";
 		String[] initialOuter= {"cardigan1.PNG", "coat1.PNG","coat2.PNG","coat3.PNG","coat4.PNG","coat5.PNG",
 								"pd1.PNG","pd2.PNG","pd3.PNG","pd4.PNG"};
@@ -49,13 +49,14 @@ public class initialCloth {
 		int[] thick={1,3,3,3,4,3,5,5,3,2};
 		int[][] style= {{3,0,1,3},{5,0,2,2},{5,0,2,4},{5,0,5,2},{0,5,0,5},
 						{2,3,0,5},{3,3,0,3},{0,5,0,3},{3,4,0,3},{2,2,0,5}};
+		int[] weather= {2,2,2,2,2,2,2,2,2,2};
 		
 		for(int i=0; i<initialOuter.length ; i++) {
 			ImageIcon icon=new ImageIcon(outerPath+initialOuter[i]);
 			Image img=icon.getImage();
 			Image changedImg= img.getScaledInstance(250,250, Image.SCALE_SMOOTH );
 			
-			outer tmp=new outer(thick[i], style[i], changedImg, link[i]);
+			outer tmp=new outer(weather[i], thick[i], style[i], changedImg, link[i]);
 			clo_outer.add(tmp);
 		}
 	
@@ -75,13 +76,14 @@ public class initialCloth {
 		String[] link= {"https://codibook.net/item/7780475?recStrategy=004061","https://codibook.net/","https://codibook.net/","https://codibook.net/","https://codibook.net/",
 				"https://codibook.net/","https://codibook.net/","https://codibook.net/","https://codibook.net/","https://codibook.net/",
 				"https://codibook.net/","https://codibook.net/","https://codibook.net/"};
+		int[] weather= {2,2,2,2,2,2,2,2,2,2,2,2,2};
 		
 		for(int i=0; i<initialtop.length ; i++) {
 			ImageIcon icon=new ImageIcon(topPath+initialtop[i]);
 			Image img=icon.getImage();
 			Image changedImg= img.getScaledInstance(250,250, Image.SCALE_SMOOTH );
 			
-			top tmp=new top(thick[i], style[i], changedImg, link[i]);
+			top tmp=new top(weather[i],thick[i], style[i], changedImg, link[i]);
 			clo_top.add(tmp);
 		}
 	}
@@ -99,13 +101,14 @@ public class initialCloth {
 		int[] thick={3,3,3,3,3,4,4,4,4,3};
 		int[][] style= {{5,2,3,3},{3,2,3,4},{0,0,0,5},{3,2,0,5},{5,2,2,3},
 						{2,5,5,0},{2,0,0,5},{4,0,2,3},{0,5,3,5},{5,0,4,1}};
+		int[] weather= {2,2,2,2,2,2,2,2,2,2};
 		
 		for(int i=0; i<initialPants.length ; i++) {
 			ImageIcon icon=new ImageIcon(pantsPath+initialPants[i]);
 			Image img=icon.getImage();
 			Image changedImg= img.getScaledInstance(250,250, Image.SCALE_SMOOTH );
 			
-			pants tmp=new pants(thick[i], style[i], changedImg, link[i]);
+			pants tmp=new pants(weather[i], thick[i], style[i], changedImg, link[i]);
 			clo_pants.add(tmp);
 		}
 	}
@@ -122,13 +125,14 @@ public class initialCloth {
 						{4,4,1,4}};
 		
 		String[] link={"https://codibook.net/","https://codibook.net/","https://codibook.net/","https://codibook.net/","https://codibook.net/","https://codibook.net/"};
+		int[] weather= {2,2,2,2,2,2};
 		
 		for(int i=0; i<initialShoes.length ; i++) {
 			ImageIcon icon=new ImageIcon(shoesPath+initialShoes[i]);
 			Image img=icon.getImage();
 			Image changedImg= img.getScaledInstance(250,250, Image.SCALE_SMOOTH );
 			
-			shoes tmp=new shoes(thick[i], style[i], changedImg,link[i]);
+			shoes tmp=new shoes(weather[i],thick[i], style[i], changedImg,link[i]);
 			clo_shoes.add(tmp);
 		}
 	}
