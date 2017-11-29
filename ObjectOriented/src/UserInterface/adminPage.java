@@ -2,16 +2,12 @@ package UserInterface;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+
 import javax.swing.border.EmptyBorder;
 
 import InnerClass.DBmethod;
 
 import java.awt.Color;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,19 +21,7 @@ public class adminPage extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					adminPage frame = new adminPage();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Create the frame.
 	 */
@@ -97,8 +81,11 @@ public class adminPage extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
+					System.out.println((String)cb_weather.getSelectedItem());
 					DBmethod.addtip((String)cb_weather.getSelectedItem(), tf_tip.getText(),tf_link.getText());
-					System.out.println("팁추가 완료");
+					tf_tip.setText("");
+					tf_link.setText("");
+					JOptionPane.showMessageDialog(null, "완료", "팁 추가 완료", JOptionPane.INFORMATION_MESSAGE);
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

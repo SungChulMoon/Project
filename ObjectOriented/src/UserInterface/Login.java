@@ -115,11 +115,16 @@ public class Login extends JFrame {
 							JOptionPane.ERROR_MESSAGE);
 				} else if (idcheck && passcheck) {
 					JOptionPane.showMessageDialog(null, "로그인 완료", "로그인 완료", JOptionPane.INFORMATION_MESSAGE);
-					
+					if(tf_id_login.getText().equals("admin")) {
+						adminPage ap = new adminPage();
+						ap.setVisible(true);
+						dispose();
+					}
+					else {
 					Main main = new Main(tf_id_login.getText());
 					main.setVisible(true);
 					dispose();
-					
+					}
 				}
 
 			}

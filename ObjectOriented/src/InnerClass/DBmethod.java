@@ -23,27 +23,7 @@ public class DBmethod {
 	
 	}
 
-	public static String getnowWeahter() throws Exception{
-		getInfo();
-		ArrayList<String> arr = new ArrayList<>();
-		PreparedStatement pst =conn.prepareStatement("select * from nowweather");
-		ResultSet rs = pst.executeQuery();
-		while(rs.next()) {
-			arr.add(rs.getString(1));
-		}
-		return arr.get(arr.size()-1);
-	}
-	public static String getforeWeahter() throws Exception{
-		getInfo();
-		ArrayList<String> arr = new ArrayList<>();
-		PreparedStatement pst =conn.prepareStatement("select * from forecastweather");
-		ResultSet rs = pst.executeQuery();
-		while(rs.next()) {
-			arr.add(rs.getString(1));
-			System.out.println("예측날씨가 분류되:"+rs.getString(1));
-		}
-		return arr.get(arr.size()-1);
-	}
+	
 	public static nowWeather getNowweatherParsed()throws Exception{
 		getInfo();
 		ArrayList<nowWeather> nowlist = new ArrayList<>();
@@ -117,11 +97,14 @@ public class DBmethod {
 	public static int addtip(String weather, String tip, String tiplink) throws Exception{
 		getInfo();
 		ArrayList<tipObject> arr = new ArrayList<>();
-		PreparedStatement pst =conn.prepareStatement("insert into tip values(?,?,?)");
+		PreparedStatement pst =conn.prepareStatement("insert into livingtip values(?,?,?)");
+		//PreparedStatement pst2 =conn.prepareStatement("delete from livingtip;");
+		
 		pst.setString(1, weather);
 		pst.setString(2, tip);
 		pst.setString(3, tiplink);
 		int cnt = pst.executeUpdate();
+		//pst2.executeUpdate();
 		return cnt;
 	}
 	public static ArrayList<tipObject> selecttip(String weather) throws Exception{
