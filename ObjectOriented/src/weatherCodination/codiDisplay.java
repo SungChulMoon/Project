@@ -45,7 +45,7 @@ public class codiDisplay extends JPanel {
 		
 		initialCloth testAddCloth=new initialCloth(sex);
 		
-		panel=new codiPanel( Integer.parseInt(temp), stylest, sizest);
+		panel=new codiPanel(Integer.parseInt(temp), stylest, sizest);
 		panel.setLocation(0,0);
 		panel.setSize(1000,250);
 		add(panel);
@@ -73,7 +73,6 @@ public class codiDisplay extends JPanel {
 	 * @see JPanel
 	 */
 	class codiPanel extends JPanel {
-		codiObject codi;
 		JPanel subPanel;
 		matchCloth testMatchCloth;
 		
@@ -91,6 +90,7 @@ public class codiDisplay extends JPanel {
 			subPanel=new JPanel();
 			subPanel.setLayout(new GridLayout(1,4));
 			
+			codiObject codi;
 			codi= new codiObject();
 			
 			subPanel=new JPanel();
@@ -131,7 +131,7 @@ public class codiDisplay extends JPanel {
 		 * @param sizest 회원의 스타일 갯수 int
 		 */
 		private void refreshCodi(int temp, String stylest,String sizest){
-		
+			codiObject codi;
 			testMatchCloth=new matchCloth(temp, stylest, sizest);
 						
 			subPanel=new JPanel();
