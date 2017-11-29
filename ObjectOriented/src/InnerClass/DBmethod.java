@@ -12,12 +12,14 @@ import java.util.ArrayList;
 public class DBmethod {
 	static Connection conn;
 	public static void getInfo() throws Exception {
-		String url = "jdbc:mysql://168.131.153.176:3306/moon";
-		String dbid = "superuser";
-		String dbpw = "1234";
-		Class.forName("com.mysql.jdbc.Driver");
-		conn = DriverManager.getConnection(url, dbid, dbpw);
-
+//		String url = "jdbc:mysql://168.131.153.176:3306/moon";
+//		String dbid = "superuser";
+//		String dbpw = "1234";
+//		Class.forName("com.mysql.jdbc.Driver");
+//		conn = DriverManager.getConnection(url, dbid, dbpw); my sql 드라이버 전용
+		Class.forName ( "org.sqlite.JDBC");
+		conn = DriverManager.getConnection("jdbc:sqlite:resource/database.db");
+		System.out.println("sqlite 사용");
 	
 	}
 
@@ -45,7 +47,7 @@ public class DBmethod {
 	public static nowWeather getNowweatherParsed()throws Exception{
 		getInfo();
 		ArrayList<nowWeather> nowlist = new ArrayList<>();
-		PreparedStatement pst =conn.prepareStatement("select * from nowweatherparsered");
+		PreparedStatement pst =conn.prepareStatement("select * from nowweatherparsed");
 		ResultSet rs = pst.executeQuery();
 		while(rs.next()) {
 			nowlist.add(new nowWeather(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)));
@@ -55,7 +57,7 @@ public class DBmethod {
 	}
 	public static int addParseredWeather(String getTemp,String getMaxtemp,String getMintemp, String getmain,String getLocation) throws Exception{
 		getInfo();
-		PreparedStatement pst =conn.prepareStatement("insert into nowweatherparsered values(?,?,?,?,?)");
+		PreparedStatement pst =conn.prepareStatement("insert into nowweatherparsed values(?,?,?,?,?)");
 		pst.setString(1, getTemp);
 		pst.setString(2, getMaxtemp);
 		pst.setString(3, getMintemp);
