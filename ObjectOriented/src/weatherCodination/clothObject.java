@@ -26,6 +26,7 @@ public class clothObject {
 	/**
 	 * 옷 객체의 생성자
 	 * 
+	 * @param wt 옷의 계절감
 	 * @param th 옷의 두께감
 	 * @param st 옷의 스타일 배열
 	 * @param img 옷 이미지
