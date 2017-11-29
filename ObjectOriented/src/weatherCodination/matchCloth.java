@@ -138,11 +138,11 @@ public class matchCloth {
 			int score=0;
 			
 			if(tempST==tempState.WARM_4 || tempST==tempState.WARM_3||tempST==tempState.WARM_2||tempST==tempState.WARM_1 
-					&& initialCloth.clo_outer.get(i).weather==1) score=100;
+					&& initialCloth.clo_top.get(i).weather==1) score=100;
 			else if(tempST==tempState.COLD_1 || tempST==tempState.COLD_2||tempST==tempState.COLD_3||tempST==tempState.COLD_4 
-					&& initialCloth.clo_outer.get(i).weather==2) score=100;
+					&& initialCloth.clo_top.get(i).weather==2) score=100;
 			
-			score=(int)(initialCloth.clo_top.get(i).thick*matchCloth.thick_weight+initialCloth.clo_top.get(i).style[style]*matchCloth.style_weight)/10;
+			score+=(int)(initialCloth.clo_top.get(i).thick*matchCloth.thick_weight+initialCloth.clo_top.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[1][i]=score;
 		}
 		
@@ -150,22 +150,22 @@ public class matchCloth {
 			int score=0;
 			
 			if(tempST==tempState.WARM_4 || tempST==tempState.WARM_3||tempST==tempState.WARM_2||tempST==tempState.WARM_1 
-					&& initialCloth.clo_outer.get(i).weather==1) score=100;
+					&& initialCloth.clo_pants.get(i).weather==1) score=100;
 			else if(tempST==tempState.COLD_1 || tempST==tempState.COLD_2||tempST==tempState.COLD_3||tempST==tempState.COLD_4 
-					&& initialCloth.clo_outer.get(i).weather==2) score=100;
+					&& initialCloth.clo_pants.get(i).weather==2) score=100;
 			
-			score=(int)(initialCloth.clo_pants.get(i).thick*matchCloth.thick_weight+initialCloth.clo_pants.get(i).style[style]*matchCloth.style_weight)/10;
+			score+=(int)(initialCloth.clo_pants.get(i).thick*matchCloth.thick_weight+initialCloth.clo_pants.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[2][i]=score;
 		}
 		for(int i=0; i<initialCloth.clo_shoes.size(); i++) {
 			int score=0;
 			
 			if(tempST==tempState.WARM_4 || tempST==tempState.WARM_3||tempST==tempState.WARM_2||tempST==tempState.WARM_1 
-					&& initialCloth.clo_outer.get(i).weather==1) score=100;
+					&& initialCloth.clo_shoes.get(i).weather==1) score=100;
 			else if(tempST==tempState.COLD_1 || tempST==tempState.COLD_2||tempST==tempState.COLD_3||tempST==tempState.COLD_4 
-					&& initialCloth.clo_outer.get(i).weather==2) score=100;
+					&& initialCloth.clo_shoes.get(i).weather==2) score=100;
 			
-			score=(int)(initialCloth.clo_shoes.get(i).thick*matchCloth.thick_weight+initialCloth.clo_shoes.get(i).style[style]*matchCloth.style_weight)/10;
+			score+=(int)(initialCloth.clo_shoes.get(i).thick*matchCloth.thick_weight+initialCloth.clo_shoes.get(i).style[style]*matchCloth.style_weight)/10;
 			clothMatrix[3][i]=score;
 		}
 	}

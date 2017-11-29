@@ -28,18 +28,18 @@ public class initialCloth {
 	 * addCloth의 생성자
 	 * 
 	 * */
-	initialCloth() { //매개변수로 성별 가져와서 객체 생성
-		this.initialOuter();
-		this.initialTop();
-		this.initialPants();
-		this.initialShoes();
+	initialCloth(String sex) { //매개변수로 성별 가져와서 객체 생성
+		this.initialOuter(sex);
+		this.initialTop(sex);
+		this.initialPants(sex);
+		this.initialShoes(sex);
 	}
 
 	
 	/**
 	 * 초기 outer객체를 생성해 ArrayList인 clo_outer에 삽입하는 함수
 	 * */
-	public void initialOuter() {
+	public void initialOuter(String sex) {
 		String outerPath=imgPath+"outer/";
 		String[] initialOuter= {"cardigan1.PNG", "coat1.PNG","coat2.PNG","coat3.PNG","coat4.PNG","coat5.PNG",
 								"pd1.PNG","pd2.PNG","pd3.PNG","pd4.PNG"};
@@ -64,7 +64,7 @@ public class initialCloth {
 	/**
 	 * 초기 top객체를 생성해 ArrayList인 clo_top에 삽입하는 함수
 	 * */
-	public void initialTop() {
+	public void initialTop(String sex)  {
 		String topPath=imgPath+"top/";
 		String[] initialtop= {"mtm1.PNG", "nt1.PNG","nt2.PNG","nt3.PNG","nt4.PNG","nt5.PNG",
 								"nt6.PNG","nt6.PNG","nt8.PNG","shirts1.PNG","shirts2.PNG","shirts3.PNG","t1.PNG"};
@@ -90,7 +90,7 @@ public class initialCloth {
 	/**
 	 * 초기 pants객체를 생성해 ArrayList인 clo_pants에 삽입하는 함수
 	 * */
-	public void initialPants() {
+	public void initialPants(String sex)  {
 		String pantsPath=imgPath+"pants/";
 		String[] initialPants= {"pants1.PNG","pants2.PNG","pants3.PNG","pants4.PNG","pants5.PNG",
 				"skt1.PNG","skt2.PNG","skt3.PNG","skt4.PNG","skt5.PNG"};
@@ -116,7 +116,7 @@ public class initialCloth {
 	/**
 	 * 초기 shoes객체를 생성해 ArrayList인 clo_shoes에 삽입하는 함수
 	 * */
-	public void initialShoes() {
+	public void initialShoes(String sex)  {
 		String shoesPath=imgPath+"shoes/";
 		String[] initialShoes= {"sh1.PNG","sh2.PNG","sh3.PNG","sh4.PNG","sh5.PNG","sh6.PNG"};
 		

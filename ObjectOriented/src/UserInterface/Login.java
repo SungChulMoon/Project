@@ -30,6 +30,7 @@ public class Login extends JFrame {
 		Login frame = new Login();
 		frame.setVisible(true);
 	
+	
 
 	}
 
@@ -139,7 +140,7 @@ public class Login extends JFrame {
 		btn_join_login.setBounds(364, 300, 210, 30);
 		btn_join_login.setForeground(new Color(5, 97, 232));
 		contentPane.add(btn_join_login);
-
-	}
+		
+			}
 
 }
