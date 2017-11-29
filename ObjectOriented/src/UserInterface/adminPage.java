@@ -5,11 +5,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import InnerClass.DBmethod;
+
 import java.awt.Color;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class adminPage extends JFrame {
 
@@ -48,9 +53,12 @@ public class adminPage extends JFrame {
 		JComboBox cb_weather = new JComboBox();
 		cb_weather.setBounds(89, 161, 122, 24);
 		cb_weather.addItem("Clear");
-		cb_weather.addItem("Rain, Drizzle");
+		cb_weather.addItem("Rain");
+		cb_weather.addItem("Drizzle");
 		cb_weather.addItem("Clouds");
-		cb_weather.addItem("Mist, Haze, Fog");
+		cb_weather.addItem("Mist");
+		cb_weather.addItem("Haze");
+		cb_weather.addItem("Fog");
 		cb_weather.addItem("Snow");
 		contentPane.add(cb_weather);
 		
@@ -84,11 +92,33 @@ public class adminPage extends JFrame {
 		btn_addtip.setBackground(Color.WHITE);
 		btn_addtip.setBounds(725, 270, 120, 40);
 		contentPane.add(btn_addtip);
+		btn_addtip.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					DBmethod.addtip((String)cb_weather.getSelectedItem(), tf_tip.getText(),tf_link.getText());
+					System.out.println("팁추가 완료");
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		
 		JButton btn_back = new JButton("뒤로가기");
 		btn_back.setBackground(Color.WHITE);
 		btn_back.setBounds(740, 40, 120, 40);
 		contentPane.add(btn_back);
+		btn_back.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Login lg = new Login();
+				lg.setVisible(true);
+				dispose();
+				
+			}
+		});
 		
 		
 	}
