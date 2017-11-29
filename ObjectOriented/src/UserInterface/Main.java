@@ -17,6 +17,7 @@ import InnerClass.User;
 import InnerClass.getNowWeather;
 import InnerClass.nowWeather;
 import InnerClass.setLocation;
+import InnerClass.tipObject;
 
 /**
  * 유저들의 정보를 읽어오고 현재날씨 와 예상날씨를 매칭을하여 Display하는 클래스
@@ -227,18 +228,7 @@ public class Main extends JFrame {
 		});
 		contentPane.add(la_tip2);
 		
-		ImageIcon outer = new ImageIcon("src/outer.PNG");
-		ImageIcon top = new ImageIcon("src/top.PNG");
-		ImageIcon pants = new ImageIcon("src/pants.png");
-		ImageIcon shoes = new ImageIcon("src/shoes.png");
-		
-		String lb0_link ="http://store.musinsa.com/app/product/detail/601276/0";
-		
-		String lb1_link = "http://store.musinsa.com/app/product/detail/459980/0";
-		
-		String lb2_link = "http://store.musinsa.com/app/product/detail/466299/0";
-		
-		String lb3_link = "http://store.musinsa.com/app/product/detail/104238/0";
+
 		
 		System.out.println(nowinfo.getMain());
 		setphoto(nowinfo.getMain());
@@ -343,6 +333,28 @@ public class Main extends JFrame {
 			break;
 		}
 	}
+	class tiplink extends MouseAdapter{
+		tipObject to;
+		public tiplink(tipObject to) {
+			this.to = to;
+		}
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			 if (e.getClickCount() > 0) {
+		          if (Desktop.isDesktopSupported()) {
+		                Desktop desktop = Desktop.getDesktop();
+		                try {
+		                    URI uri = new URI(to.getLink());
+		                    desktop.browse(uri);
+		                } catch (IOException ex) {
+		                    ex.printStackTrace();
+		                } catch (URISyntaxException ex) {
+		                    ex.printStackTrace();
+		                }
+		        }
+		      }
+		   }
+		}
 
 	
 	
