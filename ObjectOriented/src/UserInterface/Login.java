@@ -30,7 +30,6 @@ public class Login extends JFrame {
 		Login frame = new Login();
 		frame.setVisible(true);
 	
-	
 
 	}
 
@@ -39,7 +38,10 @@ public class Login extends JFrame {
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Image img = toolkit.getImage("src/Icon.png");
 		setIconImage(img);
-
+		ImageIcon Icon_id = new ImageIcon("src/lb_id.png");
+		ImageIcon Icon_pass = new ImageIcon("src/lb_pass.png");
+		ImageIcon Icon_login = new ImageIcon("src/lb_login.png");
+		
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 300, 720, 480);
@@ -51,19 +53,20 @@ public class Login extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 
-		JLabel lblNewLabel = new JLabel("Login");
+		
+		JLabel lblNewLabel = new JLabel(Icon_login);
 		lblNewLabel.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 40));
-		lblNewLabel.setBounds(100, 100, 160, 80);
+		lblNewLabel.setBounds(100, 100, 200, 100);
 		lblNewLabel.setForeground(new Color(5, 97, 232));
 		contentPane.add(lblNewLabel);
 
-		JLabel lblNewLabel_1 = new JLabel("I  D     : ");
-		lblNewLabel_1.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 18));
-		lblNewLabel_1.setBounds(206, 195, 54, 30);
-		lblNewLabel_1.setForeground(new Color(5, 97, 232));
-		contentPane.add(lblNewLabel_1);
+		JLabel lb_id = new JLabel(Icon_id);
+		lb_id.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 18));
+		lb_id.setBounds(206, 195, 54, 30);
+		lb_id.setForeground(new Color(5, 97, 232));
+		contentPane.add(lb_id);
 
-		JLabel label = new JLabel("Password     : ");
+		JLabel label = new JLabel(Icon_pass);
 		label.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 18));
 		label.setBounds(150, 235, 110, 30);
 		label.setForeground(new Color(5, 97, 232));
@@ -140,7 +143,7 @@ public class Login extends JFrame {
 		btn_join_login.setBounds(364, 300, 210, 30);
 		btn_join_login.setForeground(new Color(5, 97, 232));
 		contentPane.add(btn_join_login);
-		
-			}
+
+	}
 
 }
