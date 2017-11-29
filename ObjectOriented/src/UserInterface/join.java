@@ -395,6 +395,19 @@ public class join extends JFrame {
 		cb_style2.addItemListener(new itemListen());
 		cb_style3.addItemListener(new itemListen());
 		System.out.println(cnt + "");
+		JButton btn_back = new JButton(new ImageIcon("src/lb_back.png"));
+		btn_back.setBackground(Color.WHITE);
+		btn_back.setBounds(33, 33, 51, 51);
+		contentPane.add(btn_back);
+		btn_back.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Login lg = new Login();
+				lg.setVisible(true);
+				dispose();
+				
+			}
+		});
 	}
 
 	class itemListen implements ItemListener {
