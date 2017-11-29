@@ -207,7 +207,7 @@ public class Main extends JFrame {
 		la_tip2 = new JLabel(tip2);
 		la_tip2.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 20));
 		la_tip2.setBackground(Color.WHITE);
-		la_tip2.setBounds(110, 695, 460, 40);
+		la_tip2.setBounds(65, 694, 460, 40);
 		la_tip2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		la_tip2.addMouseListener(new MouseAdapter() {
 		   public void mouseClicked(MouseEvent e) {
@@ -289,11 +289,11 @@ public class Main extends JFrame {
 		panel_forecast.add(ex);
 		panel_forecast.setOpaque(false);
 		
-		ts = new codiDisplay(us.getGender(), id, nowinfo.getTemp(),us.getSty_str(), us.getSty_size());
-		ts.setBounds(17, 723, 1090, 279);
-		ts.setOpaque(false);
-		contentPane.add(ts);
-	
+//		ts = new codiDisplay(us.getGender(), id, nowinfo.getTemp(),us.getSty_str(), us.getSty_size());
+//		ts.setBounds(17, 723, 1090, 279);
+//		ts.setOpaque(false);
+//		contentPane.add(ts);
+//	
 	
 		
 	}
