@@ -114,11 +114,27 @@ public class DBmethod {
 			}
 		return us;
 	}
-//	public static ArrayList<tipObject> addtip(String weather, String tip, String tiplink) throws Exception{
-//		getInfo();
-//		ArrayList<tipObject> arr = new ArrayList<>();
-//		PreparedStatement pst =conn.prepareStatement("select * from userinfo where ");
-//		ResultSet rs = pst.executeQuery();
-//		
-//	}
+	public static int addtip(String weather, String tip, String tiplink) throws Exception{
+		getInfo();
+		ArrayList<tipObject> arr = new ArrayList<>();
+		PreparedStatement pst =conn.prepareStatement("insert into tip values(?,?,?)");
+		pst.setString(1, weather);
+		pst.setString(2, tip);
+		pst.setString(3, tiplink);
+		int cnt = pst.executeUpdate();
+		return cnt;
+	}
+	public static ArrayList<tipObject> selecttip(String weather) throws Exception{
+		getInfo();
+		ArrayList<tipObject> arr = new ArrayList<>();
+		PreparedStatement pst =conn.prepareStatement("select * from tip where weather=?");
+		pst.setString(1, weather);
+		ResultSet rs = pst.executeQuery();
+		if(rs.next()) {
+			String tip = rs.getString(2);
+			String link = rs.getString(3);
+			arr.add(new tipObject(tip, link));
+		}
+		return arr;
+	}
 }

@@ -34,6 +34,13 @@ public class join extends JFrame {
 	JRadioButton rd_m_body1 = new JRadioButton(Icon_m1, true);
 	JRadioButton rd_m_body2 = new JRadioButton(Icon_m2, true);
 	JRadioButton rd_m_body3 = new JRadioButton(Icon_m3, true);
+	ImageIcon Icon_id = new ImageIcon("src/lb_join_id.png");
+	ImageIcon Icon_name = new ImageIcon("src/lb_join_name.png");
+	ImageIcon Icon_pass = new ImageIcon("src/lb_join_pass.png");
+	ImageIcon Icon_passcheck = new ImageIcon("src/lb_join_passcheck.png");
+	ImageIcon Icon_local = new ImageIcon("src/lb_join_local.png");
+	ImageIcon Icon_gender = new ImageIcon("src/lb_join_gender.png");
+	ImageIcon Icon_style = new ImageIcon("src/lb_join_style.png");
 	ArrayList<String> arrID = new ArrayList<>();
 	boolean checkID = false;
 	private JPanel contentPane;
@@ -71,73 +78,67 @@ public class join extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 
-		JLabel lblNewLabel = new JLabel("¾Æ     ÀÌ     µð");
-		lblNewLabel.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 20));
-		lblNewLabel.setBounds(120, 33, 100, 51);
+		JLabel lblNewLabel = new JLabel(Icon_id);
+		lblNewLabel.setBounds(120, 33, 128, 52);
 		lblNewLabel.setForeground(new Color(5, 97, 232));
 		contentPane.add(lblNewLabel);
 
-		JLabel label = new JLabel("ÀÌ            ¸§");
-		label.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 21));
+		JLabel label = new JLabel(Icon_name);
 		label.setForeground(new Color(5, 97, 232));
-		label.setBounds(120, 96, 100, 51);
+		label.setBounds(120, 96, 128, 52);
 		contentPane.add(label);
 
-		JLabel label_1 = new JLabel("ºñ  ¹Ð  ¹ø  È£");
-		label_1.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 20));
+		JLabel label_1 = new JLabel(Icon_pass);
 		label_1.setForeground(new Color(5, 97, 232));
-		label_1.setBounds(120, 159, 100, 51);
+		label_1.setBounds(120, 159, 128, 52);
 		contentPane.add(label_1);
 
-		JLabel label_2 = new JLabel("ºñ¹Ð¹øÈ£ È®ÀÎ");
-		label_2.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 20));
+		JLabel label_2 = new JLabel(Icon_passcheck);
 		label_2.setForeground(new Color(5, 97, 232));
-		label_2.setBounds(120, 222, 124, 51);
+		label_2.setBounds(120, 222, 155, 52);
 		contentPane.add(label_2);
 
-		JLabel label_3 = new JLabel("¼º            º°");
-		label_3.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 21));
+		JLabel label_3 = new JLabel(Icon_gender);
 		label_3.setForeground(new Color(5, 97, 232));
-		label_3.setBounds(120, 343, 100, 51);
+		label_3.setBounds(135, 343, 100, 51);
 		contentPane.add(label_3);
 
-		JLabel label_5 = new JLabel("Áö            ¿ª");
+		JLabel label_5 = new JLabel(Icon_local);
 		label_5.setForeground(new Color(5, 97, 232));
-		label_5.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 21));
-		label_5.setBounds(120, 287, 124, 51);
+		label_5.setBounds(120, 287, 128, 52);
 		contentPane.add(label_5);
 		
 		tf_local_join = new JTextField();
 		tf_local_join.setColumns(10);
-		tf_local_join.setBounds(250, 295, 288, 37);
+		tf_local_join.setBounds(275, 295, 288, 37);
 		contentPane.add(tf_local_join);
 	
 		
 		tf_name_id = new JTextField();
-		tf_name_id.setBounds(250, 41, 288, 37);
+		tf_name_id.setBounds(275, 41, 288, 37);
 		contentPane.add(tf_name_id);
 		tf_name_id.setColumns(10);
 
 		tf_name_join = new JTextField();
 		tf_name_join.setColumns(10);
-		tf_name_join.setBounds(250, 100, 288, 37);
+		tf_name_join.setBounds(275, 100, 288, 37);
 		contentPane.add(tf_name_join);
 
 		tf_pass = new JPasswordField();
 		tf_pass.setColumns(10);
-		tf_pass.setBounds(250, 163, 288, 37);
+		tf_pass.setBounds(275, 163, 288, 37);
 		contentPane.add(tf_pass);
 
 		tf_checkpass = new JPasswordField();
 		tf_checkpass.setColumns(10);
-		tf_checkpass.setBounds(250, 226, 288, 37);
+		tf_checkpass.setBounds(275, 232, 288, 37);
 		contentPane.add(tf_checkpass);
 
 		ButtonGroup g = new ButtonGroup();
 		ButtonGroup g_woman = new ButtonGroup();
 		ButtonGroup g_man = new ButtonGroup();
 
-		JLabel label_4 = new JLabel("½º  Å¸   ÀÏ");
+		JLabel label_4 = new JLabel(Icon_style);
 		label_4.setForeground(new Color(5, 97, 232));
 		label_4.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 20));
 		label_4.setBounds(120, 568, 124, 51);
@@ -178,23 +179,23 @@ public class join extends JFrame {
 		rd_m_body3.addItemListener(new bodyItemcheck());
 		rd_body0.setBackground(Color.WHITE);
 		rd_body0.setBorderPainted(true);
-		rd_body0.setBounds(222, 406, 75, 150);
+		rd_body0.setBounds(252, 406, 75, 150);
 
 		contentPane.add(rd_body0);
 
 		rd_body1.setBackground(Color.WHITE);
 		rd_body1.setBorderPainted(true);
-		rd_body1.setBounds(311, 406, 75, 150);
+		rd_body1.setBounds(341, 406, 75, 150);
 		contentPane.add(rd_body1);
 
 		rd_body2.setBackground(Color.WHITE);
 		rd_body2.setBorderPainted(true);
-		rd_body2.setBounds(400, 406, 75, 150);
+		rd_body2.setBounds(430, 406, 75, 150);
 		contentPane.add(rd_body2);
 
 		rd_body3.setBackground(Color.WHITE);
 		rd_body3.setBorderPainted(true);
-		rd_body3.setBounds(489, 406, 90, 150);
+		rd_body3.setBounds(519, 406, 90, 150);
 		contentPane.add(rd_body3);
 		g_woman.add(rd_body0);
 		g_woman.add(rd_body1);
@@ -203,23 +204,23 @@ public class join extends JFrame {
 
 		rd_m_body0.setBackground(Color.WHITE);
 		rd_m_body0.setBorderPainted(true);
-		rd_m_body0.setBounds(222, 406, 75, 150);
+		rd_m_body0.setBounds(252, 406, 75, 150);
 		contentPane.add(rd_m_body0);
 
 		rd_m_body1.setBorderPainted(true);
 		rd_m_body1.setBackground(Color.WHITE);
-		rd_m_body1.setBounds(311, 406, 75, 150);
+		rd_m_body1.setBounds(341, 406, 75, 150);
 		contentPane.add(rd_m_body1);
 
 		rd_m_body2.setFont(new Font("³ª´®¹Ù¸¥°íµñ", Font.PLAIN, 18));
 		rd_m_body2.setBackground(Color.WHITE);
 		rd_m_body2.setBorderPainted(true);
-		rd_m_body2.setBounds(400, 406, 75, 150);
+		rd_m_body2.setBounds(430, 406, 75, 150);
 		contentPane.add(rd_m_body2);
 
 		rd_m_body3.setBackground(Color.WHITE);
 		rd_m_body3.setBorderPainted(true);
-		rd_m_body3.setBounds(489, 406, 90, 150);
+		rd_m_body3.setBounds(519, 406, 90, 150);
 		contentPane.add(rd_m_body3);
 		g_man.add(rd_m_body0);
 		g_man.add(rd_m_body1);
