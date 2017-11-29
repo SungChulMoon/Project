@@ -65,9 +65,8 @@ public class initialCloth {
 		int[] w_weather= {2,2,2,2,2,2,2,2,2,2,1,1,1,1};
 		int[] m_weather= {2,2,2,2,2,1,1,1,1,1};
 		
-		
-		if(sex=="남자") {			
-			clo_outer.clear();
+
+		if(sex.equals("남자")) {			
 			outerPath=imgPath + "outer/man/";
 			
 			for (int i = 0; i < m_initialOuter.length; i++) {
@@ -130,8 +129,7 @@ public class initialCloth {
 						1,1,1,1,1};
 		int[] m_weather= {2,2,2,2,2,2,1,1,1,1,1,1,1};
 
-		if(sex=="남자") {
-			clo_top.clear();
+		if(sex.equals("남자")) {
 			topPath=imgPath + "top/man/";
 			
 			for (int i = 0; i < m_initialTop.length; i++) {
@@ -191,8 +189,7 @@ public class initialCloth {
 						1,1,1,1,1,1,1,1,1,1};
 		int[] m_weather= {2,2,2,2,2,1,1,1,1,1};
 		
-		if(sex=="남자") {			
-			clo_pants.clear();
+		if(sex.equals("남자")) {			
 			pantsPath=imgPath + "pants/man/";
 			
 			for (int i = 0; i < m_initialPants.length; i++) {
@@ -239,9 +236,8 @@ public class initialCloth {
 		int[] weather= {2,2,2,2,2,2,1,1,1,1,1,1,1};
 		int[] m_weather= {2,2,2,2,2,1,1,1,1};
 
-		if(sex=="남자") {		
-			clo_shoes.clear();
-			shoesPath=imgPath + "outer/man/";
+		if(sex.equals("남자")) {		
+			shoesPath=imgPath + "shoes/man/";
 			
 			for (int i = 0; i < m_initialShoes.length; i++) {
 				ImageIcon icon = new ImageIcon(shoesPath + m_initialShoes[i]);
